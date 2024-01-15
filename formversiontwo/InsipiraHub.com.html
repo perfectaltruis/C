@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <!-- Slick Carousel JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- My custom JavaScript functions -->
+    <script src="filename.js"></script>
+
+     <!-- Custom stylesheet -->
+     <link rel="stylesheet" href="CSS/stylesheet.css">
+     
+</head>
+<body>
+
+    <!-- Page header -->
+    <header>
+        <h1 class="logo">Web Technologies</h1>
+
+    <!-- ======== Header Navigation ======= -->
+        <nav class="navbar">
+            <div class="max-width">
+                <ul class="menu">
+                    <li><a href="#"><strong>Home</strong></a></li>
+                    <li><a href="about-page.html"><strong>About</strong></a></li>
+                    <li><a href="service-page.html"><strong>Services</strong></a></li>
+                    <li><a href="skills-page.html"><strong>Skills</strong></a></li>
+                    <li><a href="projects-page.html"><strong>Projects</strong></a></li>
+                </ul>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    
+    <!-- User registration form -->
+    <form action="#" method="post" onsubmit="return validateForm()">
+        <!-- Full Name input -->
+        <div class="input-container">
+            <input type="text" id="fullName" placeholder="Tito Joctan" name="fullName" required pattern="[a-zA-Z]+ [a-zA-Z]+">
+            <label for="fullName">Full Name:</label>
+        </div>
+
+        <!-- Registration Number input -->
+        <div class="input-container">
+            <input type="text" id="regNumber" placeholder="BCS-00-0000-0000" name="regNumber" required pattern="BCS-[0-9]{2}-[0-9]{4}-[0-9]{4}">
+            <label for="regNumber">Registration Number:</label>
+        </div>
+
+        <!-- Password input -->
+        <div class="input-container">
+            <input type="password" id="password" placeholder="********" name="password" required>
+            <label for="password">Password:</label>
+        </div>
+
+        <!-- Confirm Password input -->
+        <div class="input-container">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" name="confirmPassword" required>
+            <label for="confirmPassword">Confirm Password:</label>
+        </div>
+
+        <!-- Email input -->
+        <div class="input-container">
+            <input type="email" id="email" placeholder="example@example.com" name="email" required>
+            <label for="email">Email:</label>
+        </div>
+
+        <!-- Gender selection -->
+        <div class="input-container">
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <label for="gender">Sex:</label>
+        </div>
+
+        <!-- Region selection -->
+        <div class="input-container">
+            <select id="region" name="region" onchange="loadDistricts()">
+                <option value="" disabled selected>Select your region</option>
+            </select>
+            <label for="region">Region:</label>
+        </div>
+
+        <!-- District selection -->
+        <div class="input-container">
+            <select id="district" name="district" required>
+                <option value="" disabled selected>Select your district</option>
+            </select>
+            <label for="district">District:</label>
+        </div>
+
+        <!-- Submit button -->
+        <input type="submit" value="Register">
+    </form>
+
+     <!-- Image Slider Section -->
+     <div id="imageSlider">
+        <div><img src="Photos/pycharm.png" alt="pycharm "></div>
+        <div><img src="Photos/security.png" alt="security "></div>
+        <div><img src="Photos/userprofile.png" alt="userprofile "></div>
+    </div>
+
+    <footer >
+        <p>Web Development &copy; 2024 All right reserved</p>
+    </footer>
+
+    <!-- Slick Carousel Initialization -->
+    <script>
+        $(document).ready(function(){
+            $('#imageSlider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: true
+            });
+        });
+    </script>
+
+    <!-- jQuery and Slick Carousel JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>
+
+</body>
+</html>

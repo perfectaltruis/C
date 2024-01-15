@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <!-- Slick Carousel JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- My custom JavaScript functions -->
+    <script src="filename.js"></script>
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+    <link rel="stylesheet" href="CSS/perfectaltruis.css">
+    
+</head>
+
+<body>
+    <!-- Page header -->
+    <header>
+        <h1 class="logo">Web Technologies</h1>
+
+    <!-- ======== Header Navigation ======= -->
+        <nav class="navbar">
+            <div class="max-width">
+                <ul class="menu">
+                    <li><a href="#"><strong>Home</strong></a></li>
+                    <li><a href="about-page.html"><strong>About</strong></a></li>
+                    <li><a href="service-page.html"><strong>Services</strong></a></li>
+                    <li><a href="skills-page.html"><strong>Skills</strong></a></li>
+                    <li><a href="projects-page.html"><strong>Projects</strong></a></li>
+                </ul>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- User registration form -->
+    <form action="#" method="post" onsubmit="return validateForm()">
+        <!-- Full Name input -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Perfect Altruis" required pattern="[a-zA-Z]+ [a-zA-Z]+">
+
+        <!-- Registration Number input -->
+        <label for="regNumber">Registration Number:</label>
+        <input type="text" id="regNumber" name="regNumber" placeholder="BCS-00-0000-0000" required pattern="BCS-[0-9]{2}-[0-9]{4}-[0-9]{4}">
+
+        <!-- Email input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="user@example.com" required>
+
+        <!-- Password input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <!-- Confirm Password input -->
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+
+        <!-- Gender selection -->
+        <label for="gender">Sex:</label>
+        <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <!-- Region selection -->
+        <label for="region">Region:</label>
+        <select id="region" name="region" onchange="loadDistricts()">
+            <option value="" disabled selected>Select your region</option>
+        </select>
+
+        <!-- District selection -->
+        <label for="district">District:</label>
+        <select id="district" name="district" required>
+            <option value="" disabled selected>Select your district</option>
+        </select>
+
+        <!-- Submit button -->
+        <input type="submit" value="Register">
+    </form>
+
+    <!-- Image Slider Section -->
+    <div id="imageSlider">
+        <div><img src="Photos/pycharm.png" alt="pycharm "></div>
+        <div><img src="Photos/security.png" alt="security "></div>
+        <div><img src="Photos/userprofile.png" alt="userprofile "></div>
+    </div>
+
+    <!-- Page footer -->
+    <footer >
+        <p>Web Development &copy; 2023 All right reserved</p>
+    </footer>
+
+    <!-- Slick Carousel Initialization -->
+    <script>
+        $(document).ready(function(){
+            $('#imageSlider').slick({
+                autoplay: true, // Set to true for automatic sliding
+                autoplaySpeed: 2000, // Set the speed of automatic sliding in milliseconds
+                dots: true, // Show navigation dots
+                arrows: true // Show navigation arrows
+            });
+        });
+    </script>
+
+    <!-- jQuery and Slick Carousel JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>
